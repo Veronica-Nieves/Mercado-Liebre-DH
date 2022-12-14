@@ -40,6 +40,10 @@ footer{
     padding: 20px 20px;
 }
 
+.footer-fixed{
+    position: fixed;
+    bottom: 0px;
+}
 
 h2{
     font-size: 24px;
@@ -164,9 +168,6 @@ h3{
 .articulo{
     background-color: white;
     margin-bottom: 10px;
-
-    transition-property: all;
-    transition-duration: 3s;
 }
 
 .img-articulo{
@@ -199,21 +200,12 @@ h3{
     right: 20px;
     top: -15px;
 
-    /*Estas dos líneas solo van si nos enfocamso unicamente al carrito, no al articulo completo
-    Se debe considerar >.icon-camion:hover*/
-    /*transition-property:all;
-    transition-duration: 1s;*/
+    transition: right 1s, transform 1s;
 }
 
-/*.icon-camion:hover{
-    transform: rotate(-90deg);
-    position: absolute;
-    right: 45px;
-}*/
 
 .articulo:hover .icon-camion{
     transform: rotate(-180deg);
-    position: absolute;
     right: 30px;
 }
 
@@ -229,13 +221,13 @@ h3{
 
 .precios{
     display: inline;
-    width: 30%;
+    width: 40%;
     font-size: 18px;
 }
 
 .descuentos{
     display: inline;
-    width: 70%;
+    width: 60%;
     font-size: 16px;
     color: var(--verde);
 }
@@ -330,8 +322,8 @@ h3{
 
 
 
-/*----- TABLET (361)-------*/
-@media (min-width:361px) {
+/*----- TABLET (481)-------*/
+@media (min-width:481px) {
 
     .copy-header{
         max-width: 350px;
@@ -369,12 +361,12 @@ h3{
 
     .descripciones{
         display: none;
+        transition-property: all 1s;
     }
 
     .articulo{
         width: 45vw;
-        transition-property: all;
-        transition-duration: 3s;
+        transition: box-shadow 1s;
     }
     .articulo:hover{
         box-shadow : 0px 0px 10px rgb(100,100,100 );
@@ -428,6 +420,17 @@ h3{
     .main-navbar a{
         font-size: 12px;
     }
+
+    .precios{
+        width: 50%;
+        font-size: 15px;
+    }
+    
+    .descuentos{
+        width: 50%;
+        font-size: 15px;
+    }
+
 
     .container-form{
         margin: 15px 25vw;
